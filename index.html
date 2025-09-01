@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Dashboard - Live API Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content fade-in">
+                <h1>📰 News Dashboard</h1>
+                <p>Fetching live news articles from NewsAPI</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Controls Section -->
+            <div class="controls slide-up">
+                <button id="refreshBtn" class="refresh-btn">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Refresh News</span>
+                </button>
+                <div id="status" class="status"></div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="error hidden">
+                <div class="error-content">
+                    <span class="error-icon">❌</span>
+                    <p>Failed to load news articles. Please check your API key and try again.</p>
+                </div>
+            </div>
+
+            <!-- Posts Container -->
+            <div id="postsContainer" class="posts-container">
+                <!-- News articles will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
